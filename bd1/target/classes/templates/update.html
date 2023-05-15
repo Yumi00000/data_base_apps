@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<form  action="http://localhost:8080/update" th:object="${clients}">
+
+    <table>
+        <td><input type = "hidden" th:field="*{id}"> </td>
+        <tr>
+            <td>First Name</td>
+            <td><input name="firstName" th:field="*{firstName}"> </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input name="lastName" th:field="*{lastName}"> </td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td><input name="mobileNumber" th:field="*{mobileNumber}"> </td>
+        </tr>
+        <tr>
+            <td>Social Media</td>
+            <td><input name="socialMedia" th:field="*{socialMedia}"> </td>
+        </tr>
+    </table>
+    <input type="submit"/>
+</form>
+</body>
+</html>
